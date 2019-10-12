@@ -16,7 +16,7 @@ tensorflow implementation of SRDenseNet
  * This code uses PILLOW library to resize image. Note that the performance of Bicubic function in PILLOW is lower than that of Matlab library. 
  * Inference code should be changed to suit your environment.
  * This code is suitable for practical usage rather than research.
-
+ * We use Resize-convolution instead Transpose-convolution. It is more flexible to handle various scale factor. 
 
 
 ## Usage
@@ -45,7 +45,7 @@ parser.add_argument("--data_root_test", type=str, default="./dataset/SR_testing_
 
  * For running tensorboard, `tensorboard --logdir=../__outputs/summaries` then access localhost:6006 with your browser
 
-## Result [Bicubic / VDSR / Label]
+## Result [SRDenseNet / Label (x3)]
 <p align="center">
 <img src="https://github.com/ppooiiuuyh/assets/blob/master/SRDENSE_1.png?raw=true" width="600">
 </p>
